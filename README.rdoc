@@ -1,0 +1,15 @@
+= Time.parse_to_utc
+
+Adds a class method to the Time class to parse a string and return it as a UTC time.
+
+== Usage
+
+  # If the input string contains not time offset, assume it's in UTC already.
+  Time.parse_to_utc("2010-09-08 12:35:00") # Time.utc(2010, 9, 8, 12, 35)
+
+  # If it contains one, convert it to UTC.
+  TIme.parse_to_utc("2010-09-08 12:35:00 +0300") # Time.utc(2010, 9, 8, 9, 35)
+
+== Legal
+
+Copyright (c) 2010 Adam Cigánek. Released under the terms of the MIT license.
